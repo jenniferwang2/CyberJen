@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Share Tech Mono', monospace;
@@ -31,20 +27,19 @@ body {
 main {
   position: relative;
   z-index: 2;
-  max-width: 700px;
-  padding: 2rem;
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   text-shadow: 0 0 20px #00ffee;
   margin-bottom: 1rem;
 }
 
-.tagline {
-  color: #caffff;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+canvas {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 25px #00ffff40;
+  border-radius: 8px;
 }
 
 footer {
@@ -56,13 +51,7 @@ footer {
 }
 
 @keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
