@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #ff00cc, #3333ff, #00ffff, #ffcc00);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+  text-shadow: 0 0 20px #00ffee;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  color: #caffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
