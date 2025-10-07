@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("CyberJen online 🦾");
 
   const taglines = [
-    "Welcome to my CTF & cybersecurity portfolio.",
     "More writeups coming soon...",
-    "meow.",
   ];
 
   const taglineEls = document.querySelectorAll(".tagline");
