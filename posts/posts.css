@@ -1,0 +1,35 @@
+.posts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.post-card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ffee44;
+  padding: 1.5rem 2rem;
+  width: 320px;
+  color: #fff;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 24px #ffcc00aa;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #caffff;
+  margin-bottom: 0.5rem;
+}
+
+.post-desc {
+  font-size: 1rem;
+  color: #eee;
+}
