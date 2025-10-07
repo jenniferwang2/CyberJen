@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const taglines = [
     "Welcome to my CTF & cybersecurity portfolio.",
     "More writeups coming soon...",
-    "CTFs are frustrating — but that’s half the fun.",
+    "meow.",
   ];
 
   const taglineEls = document.querySelectorAll(".tagline");
