@@ -5,7 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CyberJen Projects</title>
   <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js"></script>
   <link rel="stylesheet" href="projects.css" />
+  <style>
+    .carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.carousel-arrow {
+  background: #222;
+  color: #caffff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: #00ffee;
+  color: #222;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  width: 340px;
+  height: 260px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.project-card {
+  min-width: 320px;
+  max-width: 320px;
+  height: 240px;
+  margin: 0 10px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ffee44;
+  padding: 1.5rem 2rem;
+  color: #fff;
+  text-align: left;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  </style>
 </head>
 <body>
   <div class="overlay"></div>
@@ -17,19 +72,24 @@
     </div>
     <div class="nav-right">
       <a href="../resume.pdf" target="_blank" class="nav-icon" title="Resume">Resume</a>
-      <a href="mailto:your@email.com" class="nav-icon" title="Email">Email</a>
-      <a href="https://github.com/yourusername" target="_blank" class="nav-icon" title="GitHub">
+      <a href="mailto:jennif11@ualberta.ca" class="nav-icon" title="Email">Email</a>
+      <a href="https://github.com/jenniferwang2" target="_blank" class="nav-icon" title="GitHub">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="height:22px;vertical-align:middle;">
       </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" class="nav-icon" title="LinkedIn">
+      <a href="https://linkedin.com/in/jenniferwang12" target="_blank" class="nav-icon" title="LinkedIn">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="height:22px;vertical-align:middle;">
       </a>
     </div>
   </nav>
+  <div class="rain">
+    <div class="drops"></div>
+  </div>
   <main>
     <h1>Projects</h1>
-    <div class="projects-list">
-      <!-- Project cards will be injected by JS -->
+    <div class="carousel-container">
+      <button class="carousel-arrow left">&#60;</button>
+      <div class="carousel-track"></div>
+      <button class="carousel-arrow right">&#62;</button>
     </div>
   </main>
   <footer>

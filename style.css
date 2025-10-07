@@ -11,9 +11,7 @@ body {
   color: #fff;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(-45deg, #ff00cc, #3333ff, #00ffff, #ffcc00);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
+  background: linear-gradient(180deg, #2a3a6e 0%, #6e90c7 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +36,8 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 3;
-  background: rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.25); /* White, transparent */
+  border-bottom: 1px solid rgba(255,255,255,0.3); /* Optional: subtle border */
 }
 
 .nav-left {
@@ -112,4 +111,48 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.drop {
+  position: absolute;
+  width: 2px;
+  height: 18px;
+  background: linear-gradient(to bottom, #abc2e9 60%, transparent 100%);
+  opacity: 0.5;
+  border-radius: 1px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -20px;
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
 }

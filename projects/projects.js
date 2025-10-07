@@ -22,8 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  const container = document.querySelector('.projects-list');
-  projects.forEach(proj => {
+  const track = document.querySelector('.carousel-track');
+  let current = 0;
+
+  function renderCard(index) {
+    track.innerHTML = '';
+    const proj = projects[index];
     const card = document.createElement('div');
     card.className = 'project-card';
     card.innerHTML = `
@@ -31,6 +35,21 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="project-tools"><strong>Tools:</strong> ${proj.tools}</div>
       <div class="project-desc">${proj.desc}</div>
     `;
-    container.appendChild(card);
-  });
+    track.appendChild(card);
+  }
+
+  function showPrev() {
+    current = (current - 1 + projects.length) % projects.length;
+    renderCard(current);
+  }
+
+  function showNext() {
+    current = (current + 1) % projects.length;
+    renderCard(current);
+  }
+
+  document.querySelector('.carousel-arrow.left').addEventListener('click', showPrev);
+  document.querySelector('.carousel-arrow.right').addEventListener('click', showNext);
+
+  renderCard(current);
 });
